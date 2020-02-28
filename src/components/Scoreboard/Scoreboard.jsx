@@ -11,7 +11,7 @@ const Scoreboard = props => {
 	const [playerPoints, setPlayerPoints] = useState();
 
 	useEffect(() => {
-		console.log('Updating! ' + playerName);
+		console.log('Updating: ' + playerName);
 	}, [idCounter]);
 
 	/*
