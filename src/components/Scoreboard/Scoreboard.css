@@ -1,6 +1,73 @@
-html {
-    width: 900px;
-}
 .ScoreBoard {
-    background-color: grey;
+	border-radius: 3px;
 }
+/*-----------Table------------- -------------------------*/
+.Table {
+	background-color: aliceblue;
+	min-height: 600px;
+	padding: 1px;
+}
+.Table .tbody .tr .td {
+	background-color: violet;
+}
+/*-----------Table -----------------------------------ENDS*/
+/*-----------Form  ---------------------------------------*/
+.FormContainer {
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(255, 200, 97);
+	padding: 4px;
+	border-radius: 5px;
+}
+
+.Form {
+	display: flex;
+	flex-direction: column;
+	background-color:transparent;
+	height: 100%;
+	padding: 10px;
+}
+
+/*-----------Form  ------------------------------------ENDS*/
+/*-----------Inputs for player name and points ------------*/
+.InputPlayerName {
+	width: 98%;
+	margin: 5px;
+	font-size: 30px;
+	border-radius: 40px;
+}
+.InputPlayerName .Dropdown.Menu {
+	font-size: 30px;
+	background-color: thistle;
+}
+.InputPlayerName .Dropdown.Item {
+	font-size: 30px;
+	background-color: thistle;
+}
+
+.InputPlayerPoints {
+	width: 98%;
+	margin: 5px;
+	font-size: 30px;
+	border-radius: 40px;
+}
+/*-----------Inputs for player name and points --------ENDS*/
+/*-----------Add Button container -------------------------*/
+.ButtonContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: rgb(248, 198, 104);
+	
+}
+
+.AddButton {
+	width: 170px;
+	height: 75px;
+	background-color: rgb(146, 216, 193);
+	font-size: 35px;
+	text-align: center;
+	border-radius: 40px;
+	
+}
+/*-----------Add Button container -------------------------ENDS*/
