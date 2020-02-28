@@ -5,7 +5,6 @@ import { Form, FormGroup, Button, Container } from 'react-bootstrap';
 import "./Scoreboard.css";
 
 const Scoreboard = props => {
-	const [city, setCity] = useState('');
 
 	const [station, setStation] = useState([]);
 
