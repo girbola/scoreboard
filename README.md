@@ -1,4 +1,4 @@
-# Scoreboard Service
+### Scoreboard Service
 This was made with React 16.13, using Bootstrap framework.
 
 ## Features
