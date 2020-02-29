@@ -11,7 +11,11 @@ Has two columns Name and Points
 - Add Button - Testing if inputs are not empty
 
 ## Install
-Clone project and unzip the file and run npm install.
+- Clone the project and unzip the file into desired folder.
+- Go into to the scoreboard-master/ where scoreboard-master.zip were extracted.
+- Check if there are atleast src, public and package.json files.
+- Finally run npm install to install necessary react node modules.
+- npm start will launch the view of this project in your browser.
 
 ## Usage
 - Add player name and points values into input fields. 
