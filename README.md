@@ -1,14 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Scoreboard Service
+#### Scoreboard Service
 This was made with React 16.13, using Bootstrap framework.
 
-### Features
+## Features
 
 Table Bootstrap
 Bootstrap were used in this project to improve the outlook
 
-### Features
+## Features
 
 Table
 ==================================================================================
