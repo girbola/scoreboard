@@ -1,11 +1,14 @@
-html,
+html {
+  background-color: rgba(157, 158, 178, 1);
+}
 body {
   display: flex;
   flex-direction: column;
   width: 950px;
   margin: auto;
   padding-top: 2px;
-  background-color: rgb(255, 255, 255);
+   background-color: rgba(153, 153, 153, 0.493);
+
   box-shadow: 2px 2px 2px rgba(155, 155, 155, 0.1), -3px 2px 1px rgba(155, 155, 155, 0.1);
 }
 .App {
