@@ -1,9 +1,18 @@
 .ScoreBoard {
 	border-radius: 3px;
+
+	padding: 100px;
+	/* background-color: rgba(255, 158, 113, 0.253); */
+	/* background-color: rgba(201, 113, 108, 0.651); */
+	background-color: rgba(37, 87, 150, 0.651);
+}
+.ScoreBoard .h2 {
+	font-size: 45px;
+	color: white;
 }
 /*-----------Table------------- -------------------------*/
 .Table {
-	background-color: aliceblue;
+	background-color: rgba(44, 109, 139, 1);
 	min-height: 600px;
 	padding: 1px;
 }
@@ -15,17 +24,20 @@
 .FormContainer {
 	display: flex;
 	flex-direction: column;
-	background-color: rgb(255, 200, 97);
+
+	background-color: rgba(230, 123, 85, 1);
+
 	padding: 4px;
-	border-radius: 5px;
+	border-radius: 0px 0px 10px 10px;
 }
 
 .Form {
 	display: flex;
 	flex-direction: column;
-	background-color:transparent;
+	background-color: transparent;
 	height: 100%;
 	padding: 10px;
+	margin: 10px;
 }
 
 /*-----------Form  ------------------------------------ENDS*/
@@ -35,14 +47,8 @@
 	margin: 5px;
 	font-size: 30px;
 	border-radius: 40px;
-}
-.InputPlayerName .Dropdown.Menu {
-	font-size: 30px;
-	background-color: thistle;
-}
-.InputPlayerName .Dropdown.Item {
-	font-size: 30px;
-	background-color: thistle;
+	background-color: #c0d6cb;
+	box-shadow: 2px 2px 2px rgba(155, 155, 155, 0.1), -3px 2px 1px rgba(155, 155, 155, 0.1);
 }
 
 .InputPlayerPoints {
@@ -50,24 +56,26 @@
 	margin: 5px;
 	font-size: 30px;
 	border-radius: 40px;
+	background-color: rgba(192, 214, 203, 1);
+	box-shadow: 2px 2px 2px rgba(155, 155, 155, 0.1), -3px 2px 1px rgba(155, 155, 155, 0.1);
 }
 /*-----------Inputs for player name and points --------ENDS*/
 /*-----------Add Button container -------------------------*/
-.ButtonContainer {
+.AddButtonContainer {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	background-color: rgb(248, 198, 104);
-	
 }
 
 .AddButton {
 	width: 170px;
-	height: 75px;
-	background-color: rgb(146, 216, 193);
+	height: 68px;
+	background-color: rgba(121, 172, 168, 1);
+
 	font-size: 35px;
 	text-align: center;
 	border-radius: 40px;
-	
+
+	box-shadow: 2px 2px 2px rgba(121, 172, 168, 0.1), -3px 2px 1px rgba(155, 155, 155, 0.1);
 }
 /*-----------Add Button container -------------------------ENDS*/
