@@ -1,26 +1,22 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Scoreboard Challange
-<<<<<<< Updated upstream
-Scoreboard made with Bootstrap framework.
+## Scoreboard Service
+This was made with React 16.13, using Bootstrap framework.
 
 ### Features
-=======
-React 16.13
-Scoreboard made with Bootstrap framework.
-Table is also Bootstrap
+
+Table Bootstrap
 Bootstrap were used in this project to improve the outlook
 
 ### Features
-Table with two rows. Name and Points. Used react-bootstrap-table-next
-Table column Points has a automated sort option while adding new player
-Name Input   - String
-Points Input - Accepts only numbers
-Add Button - Which tests if Name Input and Points Input aren't empty
 
+Table
+==================================================================================
+Has two columns Name and Points
+- Name Input   - String
+- Points Input - Accepts only numbers. And also sorts automatically by this column
 
-Bootstrap Table next sort
-
->>>>>>> Stashed changes
-It sorts table automatically by player points.
+Button
+=================================================================================
+- Add Button - Tests Inputs are not empty
 
