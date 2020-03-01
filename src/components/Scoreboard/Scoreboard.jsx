@@ -74,19 +74,41 @@ const Scoreboard = props => {
 			order: 'desc',
 		},
 	];
-	function checkPoints() {
-
-	}
 	/*
-	 * Adds new data row into table if playerName and playerPoints inputs are not empty and are points are >= 1.
+	 * Adds new data row into table if playerName and playerPoints inputs are not empty and points are >= 1.
 	 * Parses playerPoints to integer. For example if input value is 098 it will be formatted in nicer format 98.
+	 * Sorting array according the player points. 
 	 */
 	function addToTable() {
 		const points = parseInt(playerPoints);
 
-		console.log('UPDATING addToTable: ' + playerName + ' points: ' + points);
+		// Checks if playerName or playerPoints are not empty.
 		if (playerName.length >= 1 && points >= 1) {
+			let newList = [];
+			/*
+			 * Adding new player and comparing it againts scoreBoardTableData array. If newArray length is >= 8,
+			 * it will remove a row from the bottom using pop function
+			 */
 			addNewPlayer();
+			if (scoreBoardTableData.length > 0) {
+				scoreBoardTableData.sort(sortByProperty('playerPoints'));
+				for (let i = 0; i < scoreBoardTableData.length; i++) {
+					const list = {
+						id: i,
+						playerName: scoreBoardTableData[i].playerName,
+						playerPoints: scoreBoardTableData[i].playerPoints,
+					};
+					newList.push(list);
+				}
+
+				if (newList.length >= 11) {
+					console.log('');
+					newList.pop();
+				}
+				setScoreBoardTableData(newList);
+			} else {
+				addNewPlayer();
+			}
 		}
 	}
 	/**
@@ -97,7 +119,7 @@ const Scoreboard = props => {
 	 */
 	var sortByProperty = function(property) {
 		return function(x, y) {
-			return x[property] === y[property] ? 0 : x[property] > y[property] ? 1 : -1;
+			return x[property] === y[property] ? 0 : x[property] > y[property] ? -1 : 1;
 		};
 	};
 	/*
@@ -141,35 +163,34 @@ const Scoreboard = props => {
 					</div>
 				</div>
 				{/* FormContainer for player name and player points. #playerName #playerPoints */}
-				
-					<Form className="FormContainer">
-						<Form.Group className="Form" controlId="Points">
-							{/* playerName input */}
-							<Form.Control
-								required
-								className="InputPlayerName"
-								type="text"
-								onChange={e => setPlayerName(e.target.value)}
-								// onChange={e => validatePlayerPoints(e)}
-								placeholder="Enter name"
-							/>
-							{/* playerPoints input*/}
-							<Form.Control
-								required
-								className="InputPlayerPoints"
-								type="number"
-								onChange={e => validateNumber(e)}
-								placeholder="Enter points"
-							/>
-							{/* ButtonContainer #AddButton */}
-							<Container className="AddButtonContainer">
-								<Button onClick={e => addToTable()} className="AddButton" variant="primary">
-									Add
-								</Button>
-							</Container>
-						</Form.Group>
-					</Form>
-				
+
+				<Form className="FormContainer">
+					<Form.Group className="Form" controlId="Points">
+						{/* playerName input */}
+						<Form.Control
+							required
+							className="InputPlayerName"
+							type="text"
+							onChange={e => setPlayerName(e.target.value)}
+							// onChange={e => validatePlayerPoints(e)}
+							placeholder="Enter name"
+						/>
+						{/* playerPoints input*/}
+						<Form.Control
+							required
+							className="InputPlayerPoints"
+							type="number"
+							onChange={e => validateNumber(e)}
+							placeholder="Enter points"
+						/>
+						{/* ButtonContainer #AddButton */}
+						<Container className="AddButtonContainer">
+							<Button onClick={e => addToTable()} className="AddButton" variant="primary">
+								Add
+							</Button>
+						</Container>
+					</Form.Group>
+				</Form>
 			</div>
 		</Container>
 	);
