@@ -81,6 +81,7 @@ const Scoreboard = props => {
 	 */
 	function addToTable() {
 		const points = parseInt(playerPoints);
+		if()
 		console.log('UPDATING addToTable: ' + playerName + ' points: ' + points);
 		if (playerName.length >= 1 && points >= 1) {
 			addNewPlayer();
@@ -141,7 +142,7 @@ const Scoreboard = props => {
 							/>
 							{/* playerPoints input*/}
 							<Form.Control
-								required
+								required="true"
 								className="InputPlayerPoints"
 								type="number"
 								onChange={e => validateNumber(e)}
