@@ -35,8 +35,8 @@ const Scoreboard = props => {
 				backgroundColor: '#c0d6cb',
 			},
 			/*
-			*  Styling table rows. Every second line will be lighter color
-			*/
+			 *  Styling table rows. Every second line will be lighter color
+			 */
 			style: (cell, row, rowIndex, colIndex) => {
 				if (rowIndex % 2 === 0) {
 					return {
@@ -81,12 +81,23 @@ const Scoreboard = props => {
 	 */
 	function addToTable() {
 		const points = parseInt(playerPoints);
-		if()
+
 		console.log('UPDATING addToTable: ' + playerName + ' points: ' + points);
 		if (playerName.length >= 1 && points >= 1) {
 			addNewPlayer();
 		}
 	}
+	/**
+	 * Generic array sorting
+	 *
+	 * @param property
+	 * @returns {Function}
+	 */
+	var sortByProperty = function(property) {
+		return function(x, y) {
+			return x[property] === y[property] ? 0 : x[property] > y[property] ? 1 : -1;
+		};
+	};
 	/*
 	 * Adding new player into scoreBoardTableData array {id: int, playerNamer: string, playerPoints: int}
 	 */
@@ -128,12 +139,12 @@ const Scoreboard = props => {
 					</div>
 				</div>
 				{/* FormContainer for player name and player points. #playerName #playerPoints */}
-				<Container sticky>
+				<Container>
 					<Form className="FormContainer">
 						<Form.Group className="Form" controlId="Points">
 							{/* playerName input */}
 							<Form.Control
-								required="true"
+								required
 								className="InputPlayerName"
 								type="text"
 								onChange={e => setPlayerName(e.target.value)}
@@ -142,7 +153,7 @@ const Scoreboard = props => {
 							/>
 							{/* playerPoints input*/}
 							<Form.Control
-								required="true"
+								required
 								className="InputPlayerPoints"
 								type="number"
 								onChange={e => validateNumber(e)}
