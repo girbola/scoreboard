@@ -74,7 +74,9 @@ const Scoreboard = props => {
 			order: 'desc',
 		},
 	];
+	function checkPoints() {
 
+	}
 	/*
 	 * Adds new data row into table if playerName and playerPoints inputs are not empty and are points are >= 1.
 	 * Parses playerPoints to integer. For example if input value is 098 it will be formatted in nicer format 98.
@@ -139,7 +141,7 @@ const Scoreboard = props => {
 					</div>
 				</div>
 				{/* FormContainer for player name and player points. #playerName #playerPoints */}
-				<Container>
+				
 					<Form className="FormContainer">
 						<Form.Group className="Form" controlId="Points">
 							{/* playerName input */}
@@ -167,7 +169,7 @@ const Scoreboard = props => {
 							</Container>
 						</Form.Group>
 					</Form>
-				</Container>
+				
 			</div>
 		</Container>
 	);
